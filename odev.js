@@ -14,7 +14,7 @@ const person =  {
   messageFunc.call(person);
   
 
-  // /*  
+// /*  
 //   Odev 2:
 //   Asagidaki fonksiyonu sirasiyla 
 //   20
@@ -33,7 +33,7 @@ var numbers = {
     }; 
 numbers.multiply();
 
-// //Odev 2
+//Odev 2
 
 var numbers = {
     numbers: [[10,20,30], 2],
@@ -78,6 +78,8 @@ function isValidName(name){
     }
     
 }
+
+/*
 isValidName(" J ohn")
 isValidName("selinn")
 isValidName("X")
@@ -87,7 +89,7 @@ isValidName(undefined)
 isValidName(null)
 isValidName(false)
 isValidName("Frank")
-
+*/
 
   /*
     Odev 4:
@@ -111,7 +113,7 @@ function katilimSaati(dersSayisi,dersSaati){
     }
 }
 
-katilimSaati(6,10)
+/*katilimSaati(6,10)
 katilimSaati(6,"10")
 katilimSaati("6",10)
 katilimSaati("6","10") 
@@ -136,7 +138,7 @@ katilimSaati("10","6")
 katilimSaati(6,10.1) 
 katilimSaati(6.1,10) 
 katilimSaati(6,"10.1") 
-
+*/
 
 
 
