@@ -1,7 +1,7 @@
-// /*
-//   Odev 1:
-//   Asagidaki fonksiyonu "Hello, John ciktisi verecek sekilde duzenleyiniz."
-//  */
+/*
+  Odev 1:
+  Asagidaki fonksiyonu "Hello, John ciktisi verecek sekilde duzenleyiniz."
+ */
 
 const person =  {
     name: "John",
@@ -12,16 +12,16 @@ const person =  {
   
   const messageFunc = person.message
   messageFunc.call(person);
-  
 
-// /*  
-//   Odev 2:
-//   Asagidaki fonksiyonu sirasiyla 
-//   20
-//   40
-//   60
-//   sonuclarini yazdiracak sekilde duzenleyiniz.
-// */
+
+/*  
+  Odev 2:
+  Asagidaki fonksiyonu sirasiyla 
+  20
+  40
+  60
+  sonuclarini yazdiracak sekilde duzenleyiniz.
+*/
 var numbers = {
         numbers: [[10,20,30], 2],
         multiply: function(){
@@ -33,7 +33,7 @@ var numbers = {
     }; 
 numbers.multiply();
 
-//Odev 2
+// //Odev 2
 
 var numbers = {
     numbers: [[10,20,30], 2],
@@ -46,17 +46,18 @@ var numbers = {
   };
   
   numbers.multiply();
+
   
 
   
   
-  /* 
-    Odev 3:
-    Asagidaki isValidName fonksiyonunda bir isim validasyonu yaziniz.
-    Ipucu: Verilen arguman gecerli bir isim ise true degilse false donmeli
-    Ornek : isValidName("John") true donmeli
-    Ornek : isValidName(" J ohn") false donmeli
-  */
+//   /* 
+//     Odev 3:
+//     Asagidaki isValidName fonksiyonunda bir isim validasyonu yaziniz.
+//     Ipucu: Verilen arguman gecerli bir isim ise true degilse false donmeli
+//     Ornek : isValidName("John") true donmeli
+//     Ornek : isValidName(" J ohn") false donmeli
+//   */
  
 
 function isValidName(name){
@@ -78,18 +79,14 @@ function isValidName(name){
     }
     
 }
+console.log(isValidName("Frank") === true);
+console.log(isValidName(false) === false);
+console.log(isValidName(null) === false);
+console.log(isValidName(undefined) === false);
+console.log(isValidName("") === false);
+console.log(isValidName("  \t\n") === false);
+console.log(isValidName("X") === false);
 
-/*
-isValidName(" J ohn")
-isValidName("selinn")
-isValidName("X")
-isValidName("  \t\n")
-isValidName("") 
-isValidName(undefined)
-isValidName(null)
-isValidName(false)
-isValidName("Frank")
-*/
 
   /*
     Odev 4:
@@ -105,54 +102,40 @@ isValidName("Frank")
   */
   
 function katilimSaati(dersSayisi,dersSaati){
-    if( !!Number( dersSayisi ) == true  &&  !!Number(dersSaati)==true && dersSaati != true && dersSayisi!=true  ){
-            console.log( Math.round(Number( dersSaati)) * Math.round(Number( dersSayisi ) ))
+  
+    if(dersSaati != Infinity && dersSayisi !=Infinity){
+          if( !!Number( dersSayisi ) == true  &&  !!Number(dersSaati)==true && dersSaati != true && dersSayisi!=true  ){
+            let toplamders= Math.round(Number( dersSaati)) * Math.round(Number( dersSayisi ) )
+                 return toplamders;
+            }
+          else{
+            'Girilen Degerler Uygun Degil'
+          }
     }
     else{
-        console.log('Girilen Degerler Uygun Degil')
+      return 'Girilen Degerler Uygun Degil'
     }
 }
 
-/*katilimSaati(6,10)
-katilimSaati(6,"10")
-katilimSaati("6",10)
-katilimSaati("6","10") 
-katilimSaati("",6)
-katilimSaati(6,"")
-katilimSaati("","")
-katilimSaati("foo",6) 
-katilimSaati(6,"foo") 
-katilimSaati("foo","bar")
-katilimSaati(null,null) 
-katilimSaati(null,undefined)
-katilimSaati(undefined,null)
-katilimSaati(undefined,undefined)
-katilimSaati(false,false) 
-katilimSaati(false,true)
-katilimSaati(true,false)
-katilimSaati(true,true)
-katilimSaati(10,6)
-katilimSaati(10,"6")
-katilimSaati("10",6)
-katilimSaati("10","6")
-katilimSaati(6,10.1) 
-katilimSaati(6.1,10) 
-katilimSaati(6,"10.1") 
-*/
 
-
-
-
-
-
-
-
-
-
-
-
-    
- 
-  
- 
-  
+console.log(!!katilimSaati(6, 10) == true);
+console.log(!!katilimSaati(6, "10") == true);
+console.log(!!katilimSaati("6", 10) == true);
+console.log(!!katilimSaati("6", "10") == true);
+console.log(katilimSaati("", 6) === false);
+console.log(katilimSaati(6, "") === false);
+console.log(katilimSaati("", "") === false);
+console.log(katilimSaati("foo", 6) === false);
+console.log(katilimSaati(6, "foo") === false);
+console.log(katilimSaati("foo", "bar") === false);
+console.log(katilimSaati(null, null) === false);
+console.log(katilimSaati(null, undefined) === false);
+console.log(katilimSaati(undefined, null) === false);
+console.log(katilimSaati(undefined, undefined) === false);
+console.log(katilimSaati(Infinity, Infinity) === false);
+console.log(katilimSaati(undefined, Infinity) === false);
+console.log(katilimSaati(Infinity, undefined) === false);
+console.log(katilimSaati(false, false) === false);
+console.log(katilimSaati(false, true) === false);
+console.log(katilimSaati(true, false) === false);
+console.log(katilimSaati(true, true) === false);
